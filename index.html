@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101918"><title>未抵達的幾秒 — 地震預警互動藝術</title><meta name="description" content="警報抵達了。你呢？一件關於地震預警、理解與身體記憶的互動網頁藝術作品。"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="#">間 隙 <span>INTERVAL / 001</span></a><nav><a href="#experience">進入作品</a><a href="#statement">創作自述</a><button id="sound" aria-pressed="false">聲音 關</button></nav></header>
+<main>
+<section class="hero" aria-labelledby="title">
+ <div class="hero-copy"><p class="eyebrow">SEISMIC ART · INTERACTIVE EXPERIENCE</p><h1 id="title">未抵達的<br><em>幾秒</em><span class="title-dot">。</span></h1><p class="english">THE SECONDS BETWEEN</p><p class="lead">警報抵達了。<br>你的身體，知道下一步嗎？</p><a class="enter" href="#experience">走進這幾秒 <span>↘</span></a><p class="small">約 2 分鐘 · 可靜音體驗 · 無真實警報音效</p></div>
+ <div class="hero-art"><canvas id="heroCanvas" aria-label="象徵地震波的圓環逐漸接近一個人的位置"></canvas><div class="art-top">訊息已送達 <span class="live-dot"></span></div><div class="art-label">◎ 你的位置<br><span>理解，仍在途中。</span></div><div class="art-bottom"><span>訊號 → 理解 → 行動</span><span>一段尚未完成的傳遞</span></div></div>
+</section>
+<div class="interlude"><span>01 / 聽見，然後呢？</span><p>科技爭取時間。<br><strong>演練，讓時間有了去處。</strong></p></div>
+<section id="experience" class="experience" aria-labelledby="expTitle">
+ <div class="section-top"><p class="eyebrow">A PARTICIPATORY SCORE</p><span>虛構室內情境 / 非即時地震資訊</span></div>
+ <div class="stage-layout"><div class="stage"><canvas id="stageCanvas" aria-label="地震波與你的行動軌跡藝術模擬"></canvas><div class="stage-head"><span id="modeLabel">第一幕 / 尚未練習</span><span id="phase">等待開始</span></div><div class="clock"><span id="seconds">12.0</span><small>秒 / 情境設定</small></div><div class="stage-poem" id="poem">同一段時間，<br>可以是一片空白，也可以是一個動作。</div><div class="timeline" id="timeline" aria-hidden="true"></div></div>
+ <div class="interaction"><span class="chapter" id="chapter">ACT I</span><h2 id="expTitle">當警報出現，<br>你會做什麼？</h2><p id="instruction">你坐在室內，身旁有一張堅固的桌子。即將出現的是模擬訊息。倒數代表敘事情境中的 12 秒，並非真實預警時間。</p>
+ <div id="introControls"><button class="primary" id="start">開始第一幕 <span>→</span></button><button class="text-button" id="untimed" aria-pressed="false">不倒數模式：關閉</button></div>
+ <div id="choices" hidden><p class="alert-label">模擬地震預警｜慎防強烈搖晃</p><div id="choiceButtons"></div><button class="text-button" id="finishUntimed" hidden>讓地震波抵達 →</button><button class="text-button" id="pause">暫停體驗</button></div>
+ <div id="result" hidden><p id="resultText" class="result-text" role="status"></p><button class="primary" id="next">先讓身體記住 <span>→</span></button></div>
+ <div id="rehearsal" hidden><p>現在，慢慢讀一次，也想像身體怎麼做。</p><ol class="practice"><li><b>趴下</b><span>降低身體重心。</span></li><li><b>掩護</b><span>就近到堅固桌下，保護頭頸。</span></li><li><b>穩住</b><span>抓穩桌腳，持續掩護直到搖晃停止。</span></li></ol><p class="small">此處設定為身旁有堅固桌子的室內空間；實際防護應依所在環境調整。網頁體驗不能取代實地演練。</p><button class="primary" id="startSecond">帶著這段記憶，再來一次 <span>→</span></button></div>
+ <p class="live-status" id="liveStatus" aria-live="polite"></p></div></div>
+</section>
+<section id="traces" class="traces" hidden><div class="section-top"><p class="eyebrow">YOUR TRACE / 你的時間切片</p><span>只保留於這次頁面體驗</span></div><h2>波沒有等你。<br><span>但你可以先準備好。</span></h2><div id="traceRows"></div><p id="reflection"></p><p class="small">線段呈現的是本次點選紀錄，不是避難能力評分，也不代表傷亡或減災成效。點選熟悉度同樣會影響第二次體驗。</p><button class="outline" id="restart">重新體驗 ↺</button></section>
+<section class="statement" id="statement"><div><p class="eyebrow">ARTIST'S STATEMENT</p><h2>一則警報，<br>還不是一個<br><em>完成的保護。</em></h2></div><div class="statement-copy"><p>我們習慣把地震預警想成科技的勝利：更快的偵測、更早的通知。但訊息抵達螢幕之後，還有另一段路——從辨識、理解，到身體開始行動。</p><p>這件作品以擴散的波、逐漸消失的秒數，以及你留下的選擇，描繪那段看不見的距離。猶豫不是被責備的對象；它提醒我們，安全需要在平常被練習，也需要清楚的訊息、可及的教育與合適的避難環境。</p><blockquote>「我們接住了訊號，<br>卻還沒學會接住彼此。」</blockquote><p>科技藝術把程式、聲音、資料或感測轉化為創作媒材。這裡的程式不只播放一段故事：觀眾的行動會改變作品的節奏與痕跡。地震科學提供限制與時間感，藝術讓那些限制成為能被感受、被反思的經驗。</p></div></section>
+<section class="science"><p class="eyebrow">SCIENCE BEHIND THE WORK</p><div class="science-grid"><article><span>01</span><h3>預警不是預測</h3><p>地震發生後，系統利用早期觀測資訊快速估算，向可能受影響地區發出警訊。</p></article><article><span>02</span><h3>不是每個人都有幾秒</h3><p>觀測、計算與傳遞都需要時間。近震央地區可能在收到警報前就已感受到強烈搖晃。</p></article><article><span>03</span><h3>演練讓應變更有準備</h3><p>理解訊息並熟悉適合環境的防護動作，才能更有機會利用有限時間。演練不能消除所有風險。</p></article></div><p class="disclosure">創作界線：本作的 12 秒、圓環、波形與行動軌跡皆為藝術模擬，未使用真實地震資料，也沒有建立災損預測模型。主題聚焦民眾收到警報後的應變；地震預警亦可用於設備自動控制。</p><div class="sources">科學與防護參考：<a href="https://scweb.cwa.gov.tw/zh-tw/guidance/eew/3" target="_blank" rel="noopener">中央氣象署｜強震即時警報原理 ↗</a><a href="https://scweb.cwa.gov.tw/webdata/PDF/Earthquake_precautions/" target="_blank" rel="noopener">中央氣象署｜互動式地震避難指南 ↗</a></div></section>
+</main><footer><span>間 隙 / 未抵達的幾秒</span><span>地震科學 × 互動敘事 × 身體記憶</span><a href="#">回到開頭 ↑</a></footer><script src="app.js"></script></body></html>
